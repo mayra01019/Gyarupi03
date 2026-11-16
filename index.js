@@ -1,13 +1,4 @@
 
- // ========================================
- // GYARUPI - JAVASCRIPT
- // HOME E COLEÇÃO
- // ========================================
-
-
-// ========================================
-// 1. FAVORITAR PRODUTOS
-// ========================================
 
 const favoritos = document.querySelectorAll(".favorito");
 
@@ -28,9 +19,9 @@ favoritos.forEach(function (botao) {
 });
 
 
-// ========================================
+
 // 2. PAINEL DE FAVORITOS
-// ========================================
+
 
 const botaoFavoritos = document.querySelector(".botao-favoritos");
 const painelFavoritos = document.querySelector("#painel-favoritos");
@@ -273,8 +264,6 @@ if (finalizarCompra) {
 }
 
 
-// ========================================
-// GYARUPI CARREGADA ♡
-// ========================================
+
 
 console.log("GYARUPI carregou com sucesso ♡");
