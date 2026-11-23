@@ -13,7 +13,9 @@
 
 <body>
 
-    <!-- CABEÇALHO -->
+    <!-- ========================================
+         CABEÇALHO
+    ========================================= -->
 
     <header class="cabecalho">
 
@@ -25,16 +27,24 @@
             <a href="index.html">HOME</a>
             <a href="colecao.html">COLEÇÃO</a>
             <a href="lookbook.html">LOOKBOOK</a>
-            
         </nav>
 
         <div class="acoes">
-            <button class="botao-favoritos">♡ Favoritos</button>
-            <button class="botao-sacola">🛍 Sacola</button>
+            <button class="botao-favoritos" type="button">
+                ♡ Favoritos
+            </button>
+
+            <button class="botao-sacola" type="button">
+                🛍 Sacola
+            </button>
         </div>
 
     </header>
 
+
+    <!-- ========================================
+         CONTEÚDO PRINCIPAL
+    ========================================= -->
 
     <main>
 
@@ -42,127 +52,294 @@
 
         <section class="cabecalho-pagina">
 
-            <p class="subtitulo">GYARUPI SHOP</p>
+            <p class="subtitulo">
+                GYARUPI SHOP
+            </p>
 
-            <h1>COLEÇÃO</h1>
+            <h1 id="titulo-colecao">
+                COLEÇÃO
+            </h1>
 
             <p class="descricao-pagina">
                 Encontre o seu estilo e monte seu próprio look.
             </p>
 
+            <a href="colecao.html" class="ver-todos">
+                VER TODOS OS ESTILOS ♡
+            </a>
+
         </section>
 
 
-        <!-- CATÁLOGO -->
+        <!-- ========================================
+             CATÁLOGO
+        ========================================= -->
 
         <section class="catalogo">
 
+            <!-- FILTROS -->
+
             <div class="filtros">
 
-                <button class="filtro ativo" data-filtro="todos">TODOS</button>
-                <button class="filtro" data-filtro="roupas">ROUPAS</button>
-                <button class="filtro" data-filtro="acessorios">ACESSÓRIOS</button>
-                <button class="filtro" data-filtro="bolsas">BOLSAS</button>
+                <button class="filtro ativo" data-filtro="todos">
+                    TODOS
+                </button>
+
+                <button class="filtro" data-filtro="roupas">
+                    ROUPAS
+                </button>
+
+                <button class="filtro" data-filtro="acessorios">
+                    ACESSÓRIOS
+                </button>
+
+                <button class="filtro" data-filtro="bolsas">
+                    BOLSAS
+                </button>
 
             </div>
 
 
+            <!-- ========================================
+                 PRODUTOS
+            ========================================= -->
+
             <div class="produtos">
 
-                <!-- PRODUTO 01 -->
 
-                <article class="produto roupas">
+                <!-- PRODUTO 01 - KOGYARU -->
+
+                <article class="produto roupas" data-estilo="kogyaru">
 
                     <div class="produto-imagem">
+
                         <span class="etiqueta">NEW</span>
-                        <button class="favorito" type="button">♡</button>
-                        <img src="fotoso/produto-01.jpg" alt="Produto Gyarupi">
+
+                        <button class="favorito" type="button">
+                            ♡
+                        </button>
+
+                        <img src="fotoso/produto-01.jpg" alt="Produto Kogyaru">
+
                     </div>
 
                     <div class="produto-info">
-                        <p class="produto-estilo">KOGAL</p>
+
+                        <p class="produto-estilo">KOGYARU</p>
+
                         <h3>PRODUTO 01</h3>
-                        <p class="produto-descricao">Peça estilo Kogal</p>
-                        <p class="produto-preco">R$ 199,90</p>
+
+                        <p class="produto-descricao">
+                            Peça estilo Kogyaru
+                        </p>
+
+                        <p class="produto-preco">
+                            R$ 199,90
+                        </p>
 
                         <button class="adicionar-sacola" type="button">
                             + ADICIONAR À SACOLA ♡
                         </button>
+
                     </div>
 
                 </article>
 
 
-                <!-- PRODUTO 02 -->
+                <!-- PRODUTO 02 - MANBA -->
 
-                <article class="produto roupas">
+                <article class="produto roupas" data-estilo="manba">
 
                     <div class="produto-imagem">
+
                         <span class="etiqueta">NEW</span>
-                        <button class="favorito" type="button">♡</button>
-                        <img src="fotoso/produto-02.jpg" alt="Produto Gyarupi">
-                    </div>
 
-                    <div class="produto-info">
-                        <p class="produto-estilo">AGEJO</p>
-                        <h3>PRODUTO 02</h3>
-                        <p class="produto-descricao">Peça estilo Agejo</p>
-                        <p class="produto-preco">R$ 189,90</p>
-
-                        <button class="adicionar-sacola" type="button">
-                            + ADICIONAR À SACOLA ♡
+                        <button class="favorito" type="button">
+                            ♡
                         </button>
-                    </div>
 
-                </article>
+                        <img src="fotoso/produto-02.jpg" alt="Produto Manba">
 
-
-                <!-- PRODUTO 03 -->
-
-                <article class="produto acessorios">
-
-                    <div class="produto-imagem">
-                        <span class="etiqueta">NEW</span>
-                        <button class="favorito" type="button">♡</button>
-                        <img src="fotoso/produto-03.jpg" alt="Produto Gyarupi">
                     </div>
 
                     <div class="produto-info">
+
                         <p class="produto-estilo">MANBA</p>
-                        <h3>PRODUTO 03</h3>
-                        <p class="produto-descricao">Acessório estilo Manba</p>
-                        <p class="produto-preco">R$ 219,90</p>
+
+                        <h3>PRODUTO 02</h3>
+
+                        <p class="produto-descricao">
+                            Peça estilo Manba
+                        </p>
+
+                        <p class="produto-preco">
+                            R$ 189,90
+                        </p>
 
                         <button class="adicionar-sacola" type="button">
                             + ADICIONAR À SACOLA ♡
                         </button>
+
                     </div>
 
                 </article>
 
 
-                <!-- PRODUTO 04 -->
+                <!-- PRODUTO 03 - TSUYOME -->
 
-                <article class="produto bolsas">
+                <article class="produto acessorios" data-estilo="tsuyome">
 
                     <div class="produto-imagem">
+
                         <span class="etiqueta">NEW</span>
-                        <button class="favorito" type="button">♡</button>
-                        <img src="fotoso/produto-04.jpg" alt="Produto Gyarupi">
+
+                        <button class="favorito" type="button">
+                            ♡
+                        </button>
+
+                        <img src="fotoso/oculos de sol.jpg" alt="Óculos de sol Tsuyome">
+
                     </div>
 
                     <div class="produto-info">
-                        <p class="produto-estilo">GYARUPI</p>
-                        <h3>PRODUTO 04</h3>
-                        <p class="produto-descricao">Bolsa Gyarupi</p>
-                        <p class="produto-preco">R$ 199,90</p>
+
+                        <p class="produto-estilo">TSUYOME</p>
+
+                        <h3>ÓCULOS DE SOL</h3>
+
+                        <p class="produto-descricao">
+                            Acessório estilo Tsuyome
+                        </p>
+
+                        <p class="produto-preco">
+                            R$ 30,00
+                        </p>
 
                         <button class="adicionar-sacola" type="button">
                             + ADICIONAR À SACOLA ♡
                         </button>
+
                     </div>
 
                 </article>
+
+
+                <!-- PRODUTO 04 - ROKKU -->
+
+                <article class="produto bolsas" data-estilo="rokku">
+
+                    <div class="produto-imagem">
+
+                        <span class="etiqueta">NEW</span>
+
+                        <button class="favorito" type="button">
+                            ♡
+                        </button>
+
+                        <img src="fotoso/images.jpg" alt="Bolsa Rokku">
+
+                    </div>
+
+                    <div class="produto-info">
+
+                        <p class="produto-estilo">ROKKU</p>
+
+                        <h3>BOLSA ROKKU</h3>
+
+                        <p class="produto-descricao">
+                            Bolsa estilo Rokku
+                        </p>
+
+                        <p class="produto-preco">
+                            R$ 137,90
+                        </p>
+
+                        <button class="adicionar-sacola" type="button">
+                            + ADICIONAR À SACOLA ♡
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 05 - TSUYOME -->
+
+                <article class="produto bolsas" data-estilo="tsuyome">
+
+                    <div class="produto-imagem">
+
+                        <span class="etiqueta">NEW</span>
+
+                        <button class="favorito" type="button">
+                            ♡
+                        </button>
+
+                        <img src="fotoso/foto oncinha bolsa.jpg" alt="Bolsa Tsuyome">
+
+                    </div>
+
+                    <div class="produto-info">
+
+                        <p class="produto-estilo">TSUYOME</p>
+
+                        <h3>BOLSA TSUYOME</h3>
+
+                        <p class="produto-descricao">
+                            Bolsa estilo Tsuyome
+                        </p>
+
+                        <p class="produto-preco">
+                            R$ 101,30
+                        </p>
+
+                        <button class="adicionar-sacola" type="button">
+                            + ADICIONAR À SACOLA ♡
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 06 - TSUYOME -->
+
+                <article class="produto acessorios" data-estilo="tsuyome">
+
+                    <div class="produto-imagem">
+
+                        <span class="etiqueta">NEW</span>
+
+                        <button class="favorito" type="button">
+                            ♡
+                        </button>
+
+                        <img src="fotoso/cinto.jpg" alt="Cinto de oncinha">
+
+                    </div>
+
+                    <div class="produto-info">
+
+                        <p class="produto-estilo">TSUYOME</p>
+
+                        <h3>CINTO ONCINHA</h3>
+
+                        <p class="produto-descricao">
+                            Acessório estilo Tsuyome
+                        </p>
+
+                        <p class="produto-preco">
+                            R$ 60,30
+                        </p>
+
+                        <button class="adicionar-sacola" type="button">
+                            + ADICIONAR À SACOLA ♡
+                        </button>
+
+                    </div>
+
+                </article>
+
 
             </div>
 
@@ -171,7 +348,9 @@
     </main>
 
 
-    <!-- PAINEL DE FAVORITOS -->
+    <!-- ========================================
+         PAINEL DE FAVORITOS
+    ========================================= -->
 
     <div class="favoritos-fundo" id="favoritos-fundo"></div>
 
@@ -202,7 +381,9 @@
     </aside>
 
 
-    <!-- PAINEL DA SACOLA -->
+    <!-- ========================================
+         PAINEL DA SACOLA
+    ========================================= -->
 
     <div class="sacola-fundo" id="sacola-fundo"></div>
 
@@ -246,7 +427,9 @@
     </aside>
 
 
-    <!-- JAVASCRIPT -->
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
 
     <script src="index.js"></script>
 

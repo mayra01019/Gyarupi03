@@ -12,10 +12,6 @@
 
 <body>
 
-    <!-- ========================================
-         CABEÇALHO
-    ========================================= -->
-
     <header class="cabecalho">
 
         <div class="logo">
@@ -26,13 +22,13 @@
             <a href="index.html">HOME</a>
             <a href="colecao.html">COLEÇÃO</a>
             <a href="lookbook.html">LOOKBOOK</a>
-           
+
         </nav>
 
         <div class="acoes">
-    <button class="botao-favoritos">♡ Favoritos</button>
-    <button class="botao-sacola">🛍 Sacola</button>
-</div>
+            <button class="botao-favoritos">♡ Favoritos</button>
+            <button class="botao-sacola">🛍 Sacola</button>
+        </div>
     </header>
 
 
@@ -238,30 +234,43 @@
 
             <div class="lista-estilos">
 
-                <!-- KOGAL -->
+                <!-- ROKKU -->
 
                 <article class="estilo">
 
-                    <img src="imagens/kogal.jpg" alt="Estilo Kogal Gyaru">
+                    <img src="fotoso/Mayra lookbook copiar.jpg" alt="Estilo Rokku Gyaru">
 
-                    <h3>KOGAL</h3>
+                    <h3>ROKKU</h3>
 
-                    <a href="colecao.html">
+                    <a href="colecao.html?estilo=rokku">
+                        EXPLORAR
+                    </a>
+                </article>
+
+
+                <!-- himegyaru -->
+
+                <article class="estilo">
+
+                    <img src="fotoso/Manu 2 lookbook copiar.jpg" alt="Estilo himegyaru Gyaru">
+
+                    <h3>HIMEGYARU</h3>
+
+                    <a href="colecao.html?estilo=rokku">
                         EXPLORAR
                     </a>
 
                 </article>
 
-
-                <!-- AGEJO -->
+                <!-- Tsuyome -->
 
                 <article class="estilo">
 
-                    <img src="imagens/agejo.jpg" alt="Estilo Agejo Gyaru">
+                    <img src="fotoso/Maria lookbook copiar.jpg" alt="Estilo Tsuyome Gyaru">
 
-                    <h3>AGEJO</h3>
+                    <h3>TSUYOME</h3>
 
-                    <a href="colecao.html">
+                    <a href="colecao.html?estilo=tsuyome">
                         EXPLORAR
                     </a>
 
@@ -272,17 +281,31 @@
 
                 <article class="estilo manba">
 
-                    <img src="fotoso/MANBA.jpg" alt="Estilo Manba Gyaru">
+                    <img src="fotoso/Giulli lookbook copiar.jpg" alt="Estilo Manba Gyaru">
 
                     <h3>MANBA</h3>
 
-                    <a href="colecao.html">
+                    <a href="colecao.html?estilo=manba">
+                        EXPLORAR
+                    </a>
+                </article>
+
+                <!-- KOGYARU -->
+
+                <article class="estilo Kogyaru">
+
+                    <img src="fotoso/Manu lookbook copiar.jpg" alt="Estilo Kogyaru Gyaru">
+
+                    <h3>KOGYARU</h3>
+
+                    <a href="colecao.html?estilo=kogyaru">
                         EXPLORAR
                     </a>
 
                 </article>
 
         </section>
+
 
 
         <!-- ====================================
@@ -320,25 +343,20 @@
 
             <h2>SOBRE A GYARUPI</h2>
 
-            <p>
-                Moda, identidade e liberdade para criar o seu próprio estilo.
-            </p>
 
-            <a href="sobre.html">
-                CONHEÇA A GYARUPI
+
+            <a href="https://www.instagram.com/_gyarupi/" target="_blank" rel="noopener noreferrer">
+                CONHEÇA A GYARUPI ♡
             </a>
-
         </section>
 
     </main>
 
 
-    <!-- ========================================
-         JAVASCRIPT
-    ========================================= -->
+
     <!-- =========================
      POPUP GYARUPI
-========================== -->
+    ========================== -->
 
     <div class="popup-fundo" id="popup">
 
@@ -367,52 +385,52 @@
         </div>
 
     </div>
-    
 
-<!-- =========================
+
+    <!-- =========================
      FAVORITOS LATERAL
 ========================== -->
 
-<div class="favoritos-fundo" id="favoritos-fundo"></div>
+    <div class="favoritos-fundo" id="favoritos-fundo"></div>
 
 
-<aside class="painel-favoritos" id="painel-favoritos">
+    <aside class="painel-favoritos" id="painel-favoritos">
 
-    <div class="favoritos-topo">
+        <div class="favoritos-topo">
 
-        <div>
+            <div>
 
-            <p class="favoritos-mini">
-                YOUR LOVES ♡
-            </p>
+                <p class="favoritos-mini">
+                    YOUR LOVES ♡
+                </p>
 
-            <h2>FAVORITOS</h2>
+                <h2>FAVORITOS</h2>
 
-        </div>
-
-
-        <button class="fechar-favoritos" id="fechar-favoritos">
-            ×
-        </button>
-
-    </div>
+            </div>
 
 
-    <div class="favoritos-conteudo" id="favoritos-conteudo">
-
-        <div class="favoritos-vazio">
-
-            <span>♡</span>
-
-            <p>
-                Você ainda não favoritou nenhum produto.
-            </p>
+            <button class="fechar-favoritos" id="fechar-favoritos">
+                ×
+            </button>
 
         </div>
 
-    </div>
 
-</aside>
+        <div class="favoritos-conteudo" id="favoritos-conteudo">
+
+            <div class="favoritos-vazio">
+
+                <span>♡</span>
+
+                <p>
+                    Você ainda não favoritou nenhum produto.
+                </p>
+
+            </div>
+
+        </div>
+
+    </aside>
 
 
 
@@ -421,63 +439,63 @@
      SACOLA LATERAL
 ========================== -->
 
-<div class="sacola-fundo" id="sacola-fundo"></div>
+    <div class="sacola-fundo" id="sacola-fundo"></div>
 
-<aside class="painel-sacola" id="painel-sacola">
+    <aside class="painel-sacola" id="painel-sacola">
 
-    <div class="sacola-topo">
+        <div class="sacola-topo">
 
-        <div>
-            <p class="sacola-mini">
-                GYARUPI SHOP ♡
-            </p>
+            <div>
+                <p class="sacola-mini">
+                    GYARUPI SHOP ♡
+                </p>
 
-            <h2>MINHA SACOLA</h2>
-        </div>
+                <h2>MINHA SACOLA</h2>
+            </div>
 
-        <button class="fechar-sacola" id="fechar-sacola">
-            ×
-        </button>
-
-    </div>
-
-
-    <div class="sacola-conteudo" id="sacola-conteudo">
-
-        <div class="sacola-vazia">
-
-            <span>♡</span>
-
-            <p>
-                Sua sacola está vazia.
-            </p>
+            <button class="fechar-sacola" id="fechar-sacola">
+                ×
+            </button>
 
         </div>
 
-    </div>
 
+        <div class="sacola-conteudo" id="sacola-conteudo">
 
-    <div class="sacola-rodape">
+            <div class="sacola-vazia">
 
-        <div class="sacola-total">
+                <span>♡</span>
 
-            <span>TOTAL</span>
+                <p>
+                    Sua sacola está vazia.
+                </p>
 
-            <strong id="sacola-total">
-                R$ 0,00
-            </strong>
+            </div>
 
         </div>
 
-        <button class="finalizar-compra">
-            FINALIZAR COMPRA ♡
-        </button>
 
-    </div>
+        <div class="sacola-rodape">
 
-</aside>
-    
-    
+            <div class="sacola-total">
+
+                <span>TOTAL</span>
+
+                <strong id="sacola-total">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+            <button class="finalizar-compra">
+                FINALIZAR COMPRA ♡
+            </button>
+
+        </div>
+
+    </aside>
+
+
     <script src="index.js"></script>
 
 
