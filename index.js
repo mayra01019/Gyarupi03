@@ -70,7 +70,6 @@ if (botaoFavoritos && painelFavoritos && fundoFavoritos && favoritosConteudo) {
             `;
 
             return;
-
         }
 
         coracoes.forEach(function (coracao) {
@@ -95,17 +94,9 @@ if (botaoFavoritos && painelFavoritos && fundoFavoritos && favoritosConteudo) {
                 >
 
                 <div class="item-favorito-info">
-
-                    <p class="item-favorito-mini">
-                        GYARUPI ♡
-                    </p>
-
+                    <p class="item-favorito-mini">GYARUPI ♡</p>
                     <h3>${nome}</h3>
-
-                    <p class="item-favorito-preco">
-                        ${preco}
-                    </p>
-
+                    <p class="item-favorito-preco">${preco}</p>
                 </div>
             `;
 
@@ -115,11 +106,8 @@ if (botaoFavoritos && painelFavoritos && fundoFavoritos && favoritosConteudo) {
 
     });
 
-
     if (fecharFavoritos) {
-
         fecharFavoritos.addEventListener("click", fecharPainelFavoritos);
-
     }
 
     fundoFavoritos.addEventListener("click", fecharPainelFavoritos);
@@ -167,9 +155,7 @@ if (botaoSacola && painelSacola && fundoSacola) {
     });
 
     if (fecharSacola) {
-
         fecharSacola.addEventListener("click", fecharPainelSacola);
-
     }
 
     fundoSacola.addEventListener("click", fecharPainelSacola);
@@ -182,7 +168,6 @@ if (botaoSacola && painelSacola && fundoSacola) {
 ======================================== */
 
 const botoesAdicionarSacola = document.querySelectorAll(".adicionar-sacola");
-
 
 botoesAdicionarSacola.forEach(function (botao) {
 
@@ -206,14 +191,8 @@ botoesAdicionarSacola.forEach(function (botao) {
 
         if (!Number.isFinite(preco)) return;
 
-
-        // Atualiza quantidade e total
-
         quantidadeSacola++;
         totalSacola += preco;
-
-
-        // Remove mensagem de sacola vazia
 
         const sacolaVazia = sacolaConteudo.querySelector(".sacola-vazia");
 
@@ -221,39 +200,22 @@ botoesAdicionarSacola.forEach(function (botao) {
             sacolaVazia.remove();
         }
 
-
-        // Cria o item
-
         const item = document.createElement("div");
 
         item.classList.add("item-sacola");
 
         item.innerHTML = `
             <div class="item-sacola-info">
-
-                <p class="item-nome">
-                    ${nome}
-                </p>
-
-                <p class="item-preco">
-                    ${precoTexto}
-                </p>
-
+                <p class="item-nome">${nome}</p>
+                <p class="item-preco">${precoTexto}</p>
             </div>
 
-            <button
-                class="remover-item"
-                type="button"
-                aria-label="Remover ${nome}"
-            >
+            <button class="remover-item" type="button">
                 ×
             </button>
         `;
 
         sacolaConteudo.appendChild(item);
-
-
-        // Remover produto
 
         const botaoRemover = item.querySelector(".remover-item");
 
@@ -268,9 +230,6 @@ botoesAdicionarSacola.forEach(function (botao) {
             atualizarSacola();
             atualizarTotal();
 
-
-            // Se a sacola ficar vazia
-
             if (quantidadeSacola === 0) {
 
                 sacolaConteudo.innerHTML = `
@@ -283,7 +242,6 @@ botoesAdicionarSacola.forEach(function (botao) {
             }
 
         });
-
 
         atualizarSacola();
         atualizarTotal();
@@ -307,8 +265,7 @@ function atualizarSacola() {
 
     } else {
 
-        botaoSacola.textContent =
-            "🛍 Sacola (" + quantidadeSacola + ")";
+        botaoSacola.textContent = "🛍 Sacola (" + quantidadeSacola + ")";
 
     }
 
@@ -323,13 +280,10 @@ function atualizarTotal() {
 
     if (!sacolaTotal) return;
 
-    sacolaTotal.textContent = totalSacola.toLocaleString(
-        "pt-BR",
-        {
-            style: "currency",
-            currency: "BRL"
-        }
-    );
+    sacolaTotal.textContent = totalSacola.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    });
 
 }
 
@@ -353,7 +307,6 @@ if (finalizarCompra) {
 
 /* ========================================
    9. FILTROS DA COLEÇÃO
-   ROUPAS + ACESSÓRIOS + BOLSAS
 ======================================== */
 
 const botoesFiltro = document.querySelectorAll(".filtro");
@@ -365,51 +318,62 @@ const produtosColecao = document.querySelectorAll(
 const tituloColecao = document.querySelector("#titulo-colecao");
 
 
-// Descobre o estilo escolhido na HOME
+/* ========================================
+   10. IDENTIFICAR ESTILO VINDO DA HOME
+======================================== */
 
 const parametros = new URLSearchParams(window.location.search);
 
-let estiloSelecionado = parametros.get("estilo") || "todos";
+let estiloSelecionado = (
+    parametros.get("estilo") || "todos"
+).toLowerCase().trim();
 
 
-// Nomes dos estilos
+/* NOMES DOS ESTILOS */
 
 const nomesEstilos = {
 
-    rokku: "ROKKU",
-    himegyaru: "HIMEGYARU",
-    tsuyome: "TSUYOME",
-    manba: "MANBA",
     kogyaru: "KOGYARU",
-    agejo: "AGEJO"
+    manba: "MANBA",
+    mamba: "MANBA",
+    rokku: "ROKKU",
+    tsuyome: "TSUYOME",
+    hime: "HIMEGYARU",
+    himegyaru: "HIMEGYARU"
 
 };
 
 
-// Atualiza o título da coleção
+/* ========================================
+   11. ATUALIZAR TÍTULO
+======================================== */
+
+if (!nomesEstilos[estiloSelecionado]) {
+    estiloSelecionado = "todos";
+}
 
 if (tituloColecao) {
 
-    if (nomesEstilos[estiloSelecionado]) {
+    if (estiloSelecionado === "todos") {
 
-        tituloColecao.textContent =
-            "COLEÇÃO " + nomesEstilos[estiloSelecionado];
+        tituloColecao.textContent = "COLEÇÃO";
 
     } else {
 
-        tituloColecao.textContent = "COLEÇÃO";
+        tituloColecao.textContent =
+            "COLEÇÃO " + nomesEstilos[estiloSelecionado];
 
     }
 
 }
 
 
-// Categoria selecionada
+/* ========================================
+   12. FILTRAR PRODUTOS
+======================================== */
 
 let categoriaSelecionada = "todos";
 
-
-// Função que filtra os produtos
 
 function atualizarColecao() {
 
@@ -419,12 +383,19 @@ function atualizarColecao() {
             categoriaSelecionada === "todos" ||
             produto.classList.contains(categoriaSelecionada);
 
-        const estiloProduto = produto.dataset.estilo;
+
+        const estiloProduto = (
+            produto.dataset.estilo || ""
+        ).toLowerCase().trim();
+
 
         const estiloCorreto =
             estiloSelecionado === "todos" ||
             estiloProduto === estiloSelecionado ||
-            estiloProduto === "geral";
+            (
+                estiloSelecionado === "mamba" &&
+                estiloProduto === "manba"
+            );
 
 
         if (categoriaCorreta && estiloCorreto) {
@@ -442,24 +413,31 @@ function atualizarColecao() {
 }
 
 
-// Executa ao abrir a coleção
+/* ========================================
+   13. EXECUTAR FILTRO AO ABRIR A PÁGINA
+======================================== */
 
 atualizarColecao();
 
 
-// Botões de categoria
+/* ========================================
+   14. BOTÕES DE CATEGORIA
+======================================== */
 
 botoesFiltro.forEach(function (botao) {
 
     botao.addEventListener("click", function () {
 
-        categoriaSelecionada = botao.dataset.filtro;
+        categoriaSelecionada =
+            botao.dataset.filtro || "todos";
+
 
         botoesFiltro.forEach(function (outroBotao) {
 
             outroBotao.classList.remove("ativo");
 
         });
+
 
         botao.classList.add("ativo");
 

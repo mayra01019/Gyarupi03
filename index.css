@@ -2616,3 +2616,31 @@ button {
 .lookbook-area {
     padding: 35px 15px 60px;
 }
+
+
+/* BOTÃO CONHECER COLEÇÃO */
+
+.botao-conhecer {
+    display: block;
+    width: 100%;
+    padding: 14px 8px;
+
+    background-color: #24151d;
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    border: 2px solid #24151d;
+
+    transition: 0.3s;
+}
+
+.botao-conhecer:hover {
+    background-color: #ff3399;
+    border-color: #ff3399;
+}
